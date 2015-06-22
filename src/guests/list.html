@@ -1,0 +1,11 @@
+<template>
+  <section class="au-animate">
+      <h2>${heading}</h2>
+      <div class="row au-stagger">
+        <div class="col-sm-6 col-md-3 flickr-img au-animate" repeat.for="guest of guests">
+          <a route-href="route: details; params.bind: { id: guest.id }">${guest.name}</a>
+        </div>
+      </div>
+  </section>
+  <router-view></router-view>
+</template>
